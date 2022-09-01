@@ -5,7 +5,17 @@
 //   palindrome("Madam") === true
 //   palindrome("love") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+  let reverseString = ''
+
+  for (let i = 0; i < str.length; i++) {
+    const eachChar = str[i];
+    reverseString = eachChar + reverseString
+  }
+  console.log(reverseString)
+  return str.toLocaleLowerCase() === reverseString.toLocaleLowerCase()
+
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \
